@@ -3,28 +3,40 @@
 @import "nib"
 
 gris_claro=#D5D5D5
+azulfeo=#353588
 
 body
 	font-size 16px
-
 form
 	border 2px solid
 	border-radius 5px
-	//height 90vh
 	width 90vw
 	margin auto
 	padding 1em
 	background-color gris_claro
 div
 	border-bottom 1px solid
-	margin-bottom .5em
+	margin-bottom .8em
 	padding-bottom .2em
 button
-	margin .5em .2em
+	margin .6em .5em
+input
+	text-transform uppercase
+h5
+	margin 0
 .btn-inicio
 	background-color green
+	&:hover
+		background-color black
+		color white
 .btn-fin
 	background-color red
+	&:hover
+		background-color black
+		color white
 .btn-unico
 	color white
 	background-color navy
+	&:hover
+		color white
+		background-color azulfeo
