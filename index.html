@@ -35,19 +35,22 @@
 			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>			
 			<button class="btn-unico" onclick="clickMeEvent(this)">CIERRE</button>
 		</div>
+		<div>
+			<textarea placeholder="Comentarios" name="comentario" id="" cols="40" rows="10"></textarea>
+		</div>
 	</div>
 	<script type="application/javascript">
 		  function clickMeEvent(obj)
 		  {
-		  	var Digital = new Date();
-			var horas = Digital.getHours();
-			var minutos = Digital.getMinutes();
-			var dn = "AM";
-			if (minutos<=9)
-				minutos="0"+minutos;
-			lahora=horas+":"+minutos;
-			obj.innerHTML=lahora; 
-			obj.style.color=white;
+				var Digital = new Date();
+				var horas = Digital.getHours();
+				var minutos = Digital.getMinutes();
+				var dn = "AM";
+				if (minutos<=9)
+					minutos="0"+minutos;
+				lahora=horas+":"+minutos;
+				obj.innerHTML=lahora; 
+				obj.style.color=white;
 		   }
 	</script>
 </body>
