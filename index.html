@@ -7,44 +7,48 @@
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-	<form action="">
+	<div class="formulario">
 		<div>
 			<h5>CONTENEDOR</h5>
 			<input type="text" size="11" maxlength="20" />
 		</div>
 		<div>
-			<button class="btn-unico">LLEGADA</button>
+			<button class="btn-unico" onclick="clickMeEvent(this)">LLEGADA</button>
 			<h5>APERTURA</h5>
-			<button class="btn-inicio">INCIO</button>
-			<button class="btn-fin">FIN</button>			
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>			
 		</div>
 		<div>
 			<h5>DESCOSOLIDACION</h5>
-			<button class="btn-inicio">INCIO</button>
-			<button class="btn-fin">FIN</button>	
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>	
 		</div>
 		<div>
 			<h5>PREVIO</h5>
-			<button class="btn-inicio">INCIO</button>
-			<button class="btn-fin">FIN</button>	
-			<button class="btn-unico">LIBERACION</button>
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>	
+			<button class="btn-unico" onclick="clickMeEvent(this)">LIBERACION</button>
 		</div>
 		<div>
 			<h5>CONSOLIDACION</h5>
-			<button class="btn-inicio">INCIO</button>
-			<button class="btn-fin">FIN</button>			
-			<button class="btn-unico">CIERRE</button>
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>			
+			<button class="btn-unico" onclick="clickMeEvent(this)">CIERRE</button>
 		</div>
-	</form>
-	<script> 
-		var Digital = new Date();
-		var horas = Digital.getHours();
-		var minutos = Digital.getMinutes();
-		var dn = "AM";
-		if (minutos<=9)
-			minutos="0"+minutos;
-		lahora=horas+":"+minutos
-		document.button
-	</script> 
+	</div>
+	<script type="application/javascript">
+		  function clickMeEvent(obj)
+		  {
+		  	var Digital = new Date();
+			var horas = Digital.getHours();
+			var minutos = Digital.getMinutes();
+			var dn = "AM";
+			if (minutos<=9)
+				minutos="0"+minutos;
+			lahora=horas+":"+minutos;
+			obj.innerHTML=lahora; 
+			obj.style.color=white;
+		   }
+	</script>
 </body>
 </html>
