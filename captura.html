@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>PREVIOS DEMO</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<div class="formulario">
+		<div class="PrvTimp">
+			<h5>CONTENEDOR</h5>
+			<input type="text" size="11" maxlength="20" />
+		</div>
+		<div class="PrvTimp">
+			<button class="btn-unico" onclick="clickMeEvent(this)">LLEGADA</button>
+			<h5>APERTURA</h5>
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>			
+		</div>
+		<div class="PrvTimp">
+			<h5>DESCOSOLIDACION</h5>
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>	
+		</div>
+		<div class="PrvTimp">
+			<h5>PREVIO</h5>
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>	
+			<button class="btn-unico" onclick="clickMeEvent(this)">LIBERACION</button>
+		</div>
+		<div class="PrvTimp">
+			<h5>CONSOLIDACION</h5>
+			<button class="btn-inicio" onclick="clickMeEvent(this)">INCIO</button>
+			<button class="btn-fin" onclick="clickMeEvent(this)">FIN</button>			
+			<button class="btn-unico" onclick="clickMeEvent(this)">CIERRE</button>
+		</div>
+		<div class="PrvTimp">
+			<textarea placeholder="Comentarios" name="comentario" id="" cols="30" rows="10"></textarea>
+		</div>
+	</div>
+	<script type="application/javascript">
+		  function clickMeEvent(obj)
+		  {
+				var Digital = new Date();
+				var horas = Digital.getHours();
+				var minutos = Digital.getMinutes();
+				var dn = "AM";
+				if (minutos<=9)
+					minutos="0"+minutos;
+				lahora=horas+":"+minutos;
+				obj.innerHTML=lahora; 
+				obj.style.color="#fff";
+				obj.style.background="#808080"
+				obj.disabled=true;
+		   }
+	</script>
+</body>
+</html>
